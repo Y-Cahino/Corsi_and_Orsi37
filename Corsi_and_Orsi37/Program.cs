@@ -12,11 +12,13 @@ namespace Corsi_and_Orsi37
         {
             //declare
             Random r = new Random();
-            int[] array = new int[10];
+            
             //generazione array input
-
-            //aggiunta valore
-            for(int i = 0; i < array.Length; i++)
+            Console.WriteLine("Inserire numero elementi array");
+           int x = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[x];
+            //generazaione casuale array
+            for (int i = 0; i < array.Length; i++)
             {
                 array[i] = r.Next(1, 11);
                 Console.WriteLine(array[i]);
