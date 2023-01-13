@@ -28,13 +28,16 @@ namespace Corsi_and_Orsi37
                 array[i] = r.Next(1, 100);
                 Console.WriteLine(array[i]);
             }
-            //aggiunta valore
-            Console.WriteLine("Aggiunta valore in corso...");
-            Thread.Sleep(1000);
-            for()
-            {
-
-            }
+                //aggiunta valore
+                Console.WriteLine("Aggiunta valore in corso...");
+                Thread.Sleep(1000);
+                for(int j = 0; j < 1; j++)
+                {
+                    array[j] = j;
+                    Console.WriteLine(array[j]);
+                }
+            
+            
         }
         
     }
