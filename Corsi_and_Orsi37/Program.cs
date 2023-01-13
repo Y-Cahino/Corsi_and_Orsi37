@@ -12,31 +12,50 @@ namespace Corsi_and_Orsi37
         {
             //declare
             int[] array = new int[100];
-            genaarray(array);
+            int x = 0;
+            //stampa delle opzioni
+            Console.WriteLine("0 - Uscita");
+            Console.WriteLine("1 - Aggiungi elemento");
+            Console.WriteLine("2 - Stampa elementi caricati");
+            //scelta opzione
+            Console.WriteLine("Inserisci scelta");
+            int scelta = int.Parse(Console.ReadLine());
+            do
+            {
+                //exe
+                switch (scelta)
+                {
+                    case 1:
+                        Console.WriteLine("Inserire numero elementi array");
+                        x = Convert.ToInt32(Console.ReadLine());
+                        //generazione array input
+                        array = new int[x];
+                        genaarray(array);
+                        break;
+                    case 2:
+                        //aggiunta valore
+                        Console.WriteLine("Aggiunta valore in corso...");
+                        Thread.Sleep(1000);
+                        for (int j = 0; j < 1; j++)
+                        {
+                            array[j] = j;
+                            Console.WriteLine(array[j]);
+                        }
+                        break;
+                }
+            }while(scelta != 0);
         }
         static void genaarray(int[] array)
         {
             //declare
             Random r = new Random();
-            //generazione array input
-            Console.WriteLine("Inserire numero elementi array");
-            int x = Convert.ToInt32(Console.ReadLine());
-            array = new int[x];
+            
             //generazaione casuale array
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = r.Next(1, 100);
                 Console.WriteLine(array[i]);
             }
-                //aggiunta valore
-                Console.WriteLine("Aggiunta valore in corso...");
-                Thread.Sleep(1000);
-                for(int j = 0; j < 1; j++)
-                {
-                    array[j] = j;
-                    Console.WriteLine(array[j]);
-                }
-            
             
         }
 
